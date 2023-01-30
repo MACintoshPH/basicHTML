@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang = "en">
+<link rel="stylesheet" href="css\login.css">
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form class="login" id="logInForm" method="POST"  accept-charset="UTF-8">
+				<div class="login__field">
+					<i class="login__icon"></i>
+					<input id="username" type="text" class="login__input" placeholder="Username">
+				</div>
+				<div class="login__field">
+					<i class="login__icon"></i>
+					<input id="password" type="password" class="login__input" placeholder="Password">
+				</div>
+				<input type="submit" class="login__submit" value="Login" >
+							
+			</form>
+            
+			<!-- <div class="social-login">
+				<h3>log in via</h3>
+				<div class="social-icons">
+					<a href="#" class="social-login__icon fab fa-instagram"></a>
+					<a href="#" class="social-login__icon fab fa-facebook"></a>
+					<a href="#" class="social-login__icon fab fa-twitter"></a>
+				</div>
+			</div> -->
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>
+
+<script>
+    var formAjaxValidate = document.getElementById("logInForm");
+  
+    var checkForm = function(e) {
+  
+      var form = e.target;
+  
+      if((this.username.value != "sample" || this.username.value == "") || 
+      (this.password.value != "sample" || this.password.value == "")) {
+        alert("Please enter a valid username or password");
+        this.username.focus();
+        e.preventDefault();
+        return;
+      }
+      
+      alert("Success!");
+      
+      window.open("homepage.html","_self");  
+      e.preventDefault();
+  
+    }
+  
+    formAjaxValidate.addEventListener("submit", checkForm, false);
+  </script>
+</html>
